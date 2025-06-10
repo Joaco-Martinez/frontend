@@ -47,7 +47,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Cagon
+            NNNNNNNNNNNN
           </a>
         </div>
       </main>
