@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
       ) : (
         <div className="flex items-center space-x-2">
           <Link href="/login">
-            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded">
+            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 cursor-pointer rounded">
               Iniciar sesión
             </button>
           </Link>
-          <Link href="/crear">
-            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded">
+          <Link href="#pagos">
+            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded cursor-pointer">
               Crear página
             </button>
           </Link>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
       Iniciar sesión
     </button>
   </Link>
-  <Link href="/crear">
+  <Link href="#pagos">
     <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded">
       Crear página
     </button>

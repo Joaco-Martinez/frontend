@@ -22,7 +22,10 @@ const features = [
 export default function Features() {
   return (
     <section className=" py-10 px-6 md:px-16 w-full mx-auto flex flex-col items-center">
-      <h2 className="text-[40px] font-bold mb-10 md:ml-[-41rem]">Qué ofrecemos</h2>
+      <h2 className="text-4xl md:text-5xl font-bold   md:ml-[-38rem]">Qué ofrecemos</h2>
+       <p className="text-base md:text-lg text-black mb-10  md:ml-[-47rem]">
+              Tu página a tu medida
+            </p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
