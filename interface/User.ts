@@ -21,6 +21,9 @@ export interface ICreateUser {
   rol: UserRole;
 }
 
+// 0 admin 
+// 1 agente
+
 export interface ILoginUser {
   email: string;
   password: string;
