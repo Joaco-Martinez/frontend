@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
     {/* Escritorio */}
     <div className="hidden md:flex items-center space-x-4">
-      <Link href="/">Home</Link>
+      <Link href="/home">Home</Link>
       <Link href="/nosotros">Nosotros</Link>
       <Link href="/contacto">Contacto</Link>
       {logeado ? (
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
     {/* Menú móvil */}
     {showMenu && (
       <div className="absolute right-6 top-full mt-2 md:hidden flex flex-col space-y-2 bg-white shadow-lg p-4 rounded z-50">
-        <Link href="/">Home</Link>
+        <Link href="/home">Home</Link>
         <Link href="/nosotros">Nosotros</Link>
         <Link href="/contacto">Contacto</Link>
         {logeado ? (
