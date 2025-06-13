@@ -1,13 +1,9 @@
 "use client";
-import dotenv from 'dotenv';
-dotenv.config();
-
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+import { useAuthContext } from '../../../context/authContext';
+import { loginService } from "../../service/auth"
 const schema = yup.object().shape({
   email: yup.string().email('Email inválido').required('El email es obligatorio'),
   password: yup.string().min(6, 'La contraseña debe tener al menos 6 caracteres').required('La contraseña es obligatoria'),
@@ -27,27 +23,25 @@ export default function LoginForm() {
     resolver: yupResolver(schema),
   });
 
-
+  const { SaveUserData } = useAuthContext();
 
   const onSubmit = async (data: FormData) => {
-    console.log('Datos enviados:', data);
+    console.log(data)
     try {
-    const respuesta = await fetch(`${API_URL}/auths/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
+      const resultado = await loginService(data);
 
-    if (!respuesta.ok) throw new Error('Error en la petición');
+      SaveUserData({
+        user: resultado.user,
+        token: resultado.token,
+      });
+      setTimeout(() => {
+          location.href = '/home';
 
-    const resultado = await respuesta.json();
-    //me falta la logica de persistencia de sesion y respuesta dde bback nasheeee
-    console.log(resultado);
-  } catch (error) {
-    console.error('Error enviando datos:', error);
-  }
+      }, 2000)
+    
+    } catch (error) {
+      console.error('Error enviando datos:', error);
+    }
   };
 
   return (

@@ -1,5 +1,5 @@
 
-import { UserRole } from "./enum";
+// import { UserRole } from "./enum";
 
 
 export interface IUser {
@@ -9,7 +9,7 @@ export interface IUser {
   email: string;
   phone: string;
   password?: string;
-  rol: UserRole;
+  rol: 1 | 0; // 0 admin, 1 agente
 }
 
 export interface ICreateUser {
@@ -18,7 +18,7 @@ export interface ICreateUser {
   email: string;
   phone: string;
   password: string;
-  rol: UserRole;
+  rol: 1 | 0; // 0 admin, 1 agente
 }
 
 // 0 admin 
