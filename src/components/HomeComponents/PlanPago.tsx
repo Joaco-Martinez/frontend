@@ -29,7 +29,7 @@ export default function PlanPago() {
               </li>
             ))}
           </ul>
-          <button className="bg-[#A62F55] hover:bg-[#8d2748] text-white font-semibold  px-6 py-3 rounded-md transition mx-auto block">
+          <button className="bg-[#A62F55] hover:bg-[#8d2748] text-white font-semibold  px-6 py-3 rounded-md transition mx-auto block cursor-pointer">
             Comenzar ahora
           </button>
         </div>
@@ -54,7 +54,7 @@ export default function PlanPago() {
               </li>
             ))}
           </ul>
-          <button className="bg-[#A62F55] hover:bg-[#8d2748] text-white font-semibold  px-6 py-3 rounded-md transition mx-auto block">
+          <button className="bg-[#A62F55] hover:bg-[#8d2748] text-white font-semibold  px-6 py-3 rounded-md transition mx-auto block cursor-pointer">
             Comenzar ahora
           </button>
         </div>

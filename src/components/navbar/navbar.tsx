@@ -2,12 +2,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from "react";
+import { useAuthContext } from '../../../context/authContext';
 
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = React.useState(false);
-  const logeado = false
+  const { isAuth } = useAuthContext();
 
+  const logeado = isAuth;
   return (
   <nav className="relative flex justify-between items-center px-6 py-4 bg-white shadow-md h-16   mx-auto">
      <Link href="/home" className="flex items-center space-x-2 h-full"> 
@@ -30,11 +32,11 @@ const Navbar: React.FC = () => {
       <Link href="/contacto">Contacto</Link>
       {logeado ? (
         <Link href="/perfil">
-          <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded">
+          <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 cursor-pointer rounded">
             Dashboard
           </button>
         </Link>
-      ) : (
+      ) : ( 
         <div className="flex items-center space-x-2">
           <Link href="/login">
             <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 cursor-pointer rounded">
