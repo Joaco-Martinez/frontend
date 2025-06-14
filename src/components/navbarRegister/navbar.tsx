@@ -29,7 +29,7 @@ const NavbarRegister: React.FC = () => {
         <div className="flex items-center space-x-2">
           <Link href="/home#pagos">
             <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded cursor-pointer">
-              Crear cuenta
+              iniciar sesión
             </button>
           </Link>
         </div>

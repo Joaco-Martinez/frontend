@@ -7,10 +7,9 @@ const Register: React.FC = () => {
     return (
         <>
         <NavbarRegister/>
-        <div className="relative w-full bg-[url('/RegisterImg.png')] bg-cover bg-center">
-        aaa
-        </div>
+        <div className="flex flex-col items-center justify-center relative w-full bg-[url('/RegisterImg.png')] bg-cover bg-center">
             <FormRegister/>
+        </div>
         </>
 )};
 
