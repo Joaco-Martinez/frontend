@@ -45,7 +45,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[url('/fondoLoginRegister.png')] bg-cover bg-center px-2">
+    <div className="flex items-center justify-center min-h-screen bg-[url('/RegisterImg.png')] bg-cover bg-center px-2">
   <div className="bg-white border border-gray-600 p-4 md:p-8 rounded shadow-md w-full max-w-xs md:max-w-md mx-auto">
     <div className="flex flex-col items-center mb-6">
       <img src="/iconoKasapp.png" alt="Logo" width={80} height={80} className="w-[80px] h-[80px] md:w-[120px] md:h-[120px]" />
@@ -54,7 +54,7 @@ export default function LoginForm() {
 
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4 w-full">
       <div>
-        <label className="block text-sm mb-1">Email</label>
+        <label className="block text-sm mb-1 text-black">Email</label>
         <input
           type="email"
           {...register('email')}
@@ -66,7 +66,7 @@ export default function LoginForm() {
       </div>
 
       <div>
-        <label className="block text-sm mb-1">Contraseña</label>
+        <label className="block text-sm mb-1 text-black">Contraseña</label>
         <input
           type="password"
           {...register('password')}

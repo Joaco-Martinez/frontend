@@ -8,7 +8,10 @@ export default function Home() {
     <div>
       <Section1 />
     </div>
-      <div className='bg-gradient-to-b from-[#E2D2D2] to-white'>
+    {/* Joaco cambié el color del fondo del home, a uno mas rosa como la Landin para tener coherencia */}
+    {/* sola cambie el hexadecimal "#", si no te gusta y lo queres dejar 
+    como estaba solo cambiá el: "#F8E2E1" por "#E2D2D2"  */}
+      <div className='bg-gradient-to-b from-[#F8E2E1] to-white'>
       <Caracteristicas />
       <PaginaClientes />
       </div>
