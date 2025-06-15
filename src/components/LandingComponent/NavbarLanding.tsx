@@ -15,7 +15,7 @@ const NavbarLanding: React.FC = () => {
             height={98}
             className="h-[100px] w-auto mt-2 md:h-[80px] md:w-auto md:mt-0 lg:h-[100px] lg:w-auto lg:ml-5"
           />
-          <span className="text-2xl font-bold text-[#4A0E1B] mt-2 md:mt-0 lg:mt-0 lg:ml-2">
+          <span className="text-2xl font-bold text-[#4A0E1B] mt-2 md:mt-0 lg:mt-0 lg:ml-1">
             KasApp
           </span>
         </div>
