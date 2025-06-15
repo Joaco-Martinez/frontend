@@ -28,13 +28,12 @@ const NavbarRegister: React.FC = () => {
       
         <div className="flex items-center space-x-2">
           <Link href="/login">
-            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded cursor-pointer">
+            <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 ml-11 rounded cursor-pointer">
               iniciar sesión
             </button>
           </Link>
         </div>
 
-     
     </div>
 
     {/* Móvil */}

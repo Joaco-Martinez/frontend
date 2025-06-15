@@ -27,7 +27,7 @@ const NavbarLogin: React.FC = () => {
     <div className="hidden md:flex items-center space-x-4">
       
         <div className="flex items-center space-x-2">
-          <Link href="/home#pagos">
+          <Link href="/register">
             <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded cursor-pointer">
               Crear cuenta
             </button>
@@ -46,7 +46,7 @@ const NavbarLogin: React.FC = () => {
     {/* Menú móvil */}
     {showMenu && (
       <div className="absolute right-6 top-full mt-2 md:hidden flex flex-col space-y-2 bg-white shadow-lg p-4 rounded z-50">
-        <Link href="/home#pagos">
+        <Link href="/register">
             <button className="bg-[#A62F55] hover:bg-[#922749] text-white px-2 py-1 rounded cursor-pointer">
               Crear cuenta
             </button>

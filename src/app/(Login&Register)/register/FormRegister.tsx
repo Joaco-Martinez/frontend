@@ -31,7 +31,7 @@ const FormRegister: React.FC = () => {
     return (
         <>
             <Formik
-                initialValues={{ name: "", lastname: "", phone: "", email: '', password: '' }}
+                initialValues={{ name: "", lastname: "", phone:"" , email: '', password: '' }}
                 validationSchema={registerValidations}
                 onSubmit={handleOnSubmit}
             >
@@ -40,22 +40,20 @@ const FormRegister: React.FC = () => {
                         onSubmit={handleSubmit}
                         className="
                             flex flex-col items-center justify-center 
-                            text-black bg-[#FBF2F2] border-[#4e4b4b] border-2 overflow-hidden rounded-xl p-5 m-5 
+                            text-black bg-[#ffffff] border-[#4e4b4b] border overflow-hidden rounded-sm p-8 m-5 
                             w-full max-w-[90%]
-                            md:w-[450px] md:max-w-none md:m-11
-                        "
-                    >
+                            md:w-[450px] md:max-w-none md:m-11">
                         <Image 
                             src="/logoKasapp.png" 
                             width={300} 
                             height={200} 
                             alt="logoDeKasapp"
-                            className="w-[100px] h-[60px] md:w-[145px] md:h-[95px]"
+                            className="w-[100px] h-[60px] md:w-[145px] md:h-[95px] "
                         />
 
-                        <h2 className="font-bold text-2xl md:text-4xl mt-4">Crear una cuenta</h2>
+                        <h2 className="font-bold text-2xl md:text-3xl mt-4">Crear una cuenta</h2>
 
-                        <div className="flex flex-col w-full max-w-[240px]">
+                        <div className="flex flex-col w-full m-1">
                             <label htmlFor="name" className="mt-4 text-black text-base md:text-xl">Nombre</label>
                             <input
                                 type="text"
@@ -65,12 +63,12 @@ const FormRegister: React.FC = () => {
                                 value={values.name}
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                className="text-black outline-none bg-white border-2 border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
+                                className="text-black outline-none bg-white border  border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
                             />
-                            <p className="text-sm md:text-xl text-red-500 mb-2">{errors.name && touched.name && errors.name}</p>
+                            <p className="text-sm md:text-lg text-red-500 mb-2">{errors.name && touched.name && errors.name}</p>
                         </div>
 
-                        <div className="flex flex-col w-full max-w-[240px]">
+                        <div className="flex flex-col w-full m-1">
                             <label htmlFor="lastname" className="text-black text-base md:text-xl">Apellido</label>
                             <input
                                 type="text"
@@ -80,12 +78,12 @@ const FormRegister: React.FC = () => {
                                 value={values.lastname}
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                className="text-black outline-none bg-white border-2 border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
+                                className="text-black outline-none bg-white border border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
                             />
-                            <p className="text-sm md:text-xl text-red-500 mb-2">{errors.lastname && touched.lastname && errors.lastname}</p>
+                            <p className="text-sm md:text-lg text-red-500 mb-2">{errors.lastname && touched.lastname && errors.lastname}</p>
                         </div>
 
-                        <div className="flex flex-col w-full max-w-[240px]">
+                        <div className="flex flex-col w-full m-1">
                             <label htmlFor="phone" className="text-black text-base md:text-xl">Teléfono</label>
                             <input
                                 type="text"
@@ -95,12 +93,12 @@ const FormRegister: React.FC = () => {
                                 value={values.phone}
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                className="text-black outline-none bg-white border-2 border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
+                                className="text-black outline-none bg-white border border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
                             />
-                            <p className="text-sm md:text-xl text-red-500 mb-2">{errors.phone && touched.phone && errors.phone}</p>
+                            <p className="text-sm md:text-lg text-red-500 mb-2">{errors.phone && touched.phone && errors.phone}</p>
                         </div>
 
-                        <div className="flex flex-col w-full max-w-[240px]">
+                        <div className="flex flex-col w-full m-1">
                             <label htmlFor="email" className="text-black text-base md:text-xl">Email</label>
                             <input
                                 type="email"
@@ -110,12 +108,12 @@ const FormRegister: React.FC = () => {
                                 value={values.email}
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                className="text-black outline-none bg-white border-2 border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
+                                className="text-black outline-none bg-white border border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
                             />
-                            <p className="text-sm md:text-xl text-red-500 mb-2">{errors.email && touched.email && errors.email}</p>
+                            <p className="text-sm md:text-lg text-red-500 mb-2">{errors.email && touched.email && errors.email}</p>
                         </div>
 
-                        <div className="flex flex-col w-full max-w-[240px]">
+                        <div className="flex flex-col w-full m-1">
                             <label htmlFor="password" className="text-black text-base md:text-xl">Contraseña</label>
                             <input
                                 type="password"
@@ -125,16 +123,16 @@ const FormRegister: React.FC = () => {
                                 value={values.password}
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                className="text-black outline-none bg-white border-2 border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
+                                className="text-black outline-none bg-white border border-[#4e4b4b] rounded-sm p-2 focus:border-[#a0a0a0]"
                             />
-                            <p className="text-sm md:text-xl text-red-500 mb-2">{errors.password && touched.password && errors.password}</p>
+                            <p className="text-sm md:text-lg text-red-500 mb-2">{errors.password && touched.password && errors.password}</p>
                         </div>
 
                         <button
                             type="submit"
                             disabled={isSubmitting}
                             className="
-                                w-full max-w-[180px] text-white bg-[#833444] rounded-sm text-base md:text-xl py-1 mt-4 hover:bg-[#65383a] transition duration-300
+                                w-full  text-white bg-[#a62f55] rounded-sm text-base md:text-xl py-1 mt-4 hover:bg-[#65383a] transition duration-300
                             "
                         >
                             Crear cuenta

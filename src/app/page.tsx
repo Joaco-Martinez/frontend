@@ -4,17 +4,18 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import BodyLanding from "@/components/LandingComponent/BodyLanging";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import NavbarLanding from "@/components/LandingComponent/NavbarLanding";
 import Slider1 from "@/components/LandingComponent/Slider1";
 import Slider2 from "@/components/LandingComponent/Slider2"; // Por ejemplo otro slide
 import Slider3 from "@/components/LandingComponent/Slider3";
 
 export default function CarruselFullWidth() {
   return (
+    <>
+    <NavbarLanding/>
     <div className="w-full">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
@@ -23,7 +24,7 @@ export default function CarruselFullWidth() {
         pagination={{ clickable: true }}
         slidesPerView={1}
         className="w-full"
-      >
+        >
         <SwiperSlide>
           <Slider1 />
         </SwiperSlide>
@@ -36,9 +37,9 @@ export default function CarruselFullWidth() {
           <Slider3 />
         </SwiperSlide>
       </Swiper>
-
-    <BodyLanding/>
+    <BodyLanding />
 
     </div>
+      </>
   );
 }
